@@ -1,0 +1,9 @@
+project: savantenvs/astc-encoder
+target: fuzz_astc_physical_to_symbolic
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_astc_physical_to_symbolic/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_astc_physical_to_symbolic
+    libfuzzer: true
+    timeout: 10
